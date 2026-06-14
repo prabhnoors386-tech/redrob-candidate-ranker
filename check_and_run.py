@@ -50,7 +50,6 @@ def locate_dataset():
         "../candidates.jsonl.gz",
         "../candidates.jsonl"
     ]
-    
     for path in possible_paths:
         if os.path.exists(path):
             print(f"[+] Found dataset file at: {path}")
@@ -93,8 +92,8 @@ def run_pipeline(dataset_path):
             "--output", "Breakout_Zone.csv"
         ])
         print("\n[🎉] PIPELINE EXECUTION SUCCESSFUL!")
-        print("[+] Your final submission spreadsheet 'Breakout_Zone.csv' has been generated.")
-        print("\nOutput Location: ./Breakout_Zone.csv")
+        print("[+] Your final submission spreadsheet 'punjab.csv' has been generated.")
+        print("\nOutput Location: ./punjab.csv")
         print("Top 100 ranked candidates ready for submission!")
     except subprocess.CalledProcessError as e:
         print(f"[-] Stage 2 critical ranking execution error: {e}")
