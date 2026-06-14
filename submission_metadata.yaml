@@ -1,0 +1,39 @@
+team_id: "redrob-candidate-ranker"
+team_name: "Redrob Candidate Ranker"
+challenge: "The Data & AI Challenge: Intelligent Candidate Discovery"
+orchestrator: "Redrob"
+submission_date: "2026-06-14"
+description: |
+  Production-grade two-stage candidate ranking system combining structural
+  validation with semantic scoring and behavioral signal multipliers.
+  Designed for CPU-only execution within sandboxed Docker containers.
+architecture:
+  stage_1: "Structural precomputation with honeypot detection"
+  stage_2: "Fast vectorized inference with behavioral multipliers"
+requirements:
+  - numpy>=1.24.0
+  - scipy>=1.10.0
+  - pyyaml>=6.0
+  - pandas>=2.0.0
+  - scikit-learn>=1.3.0
+  - sentence-transformers>=2.2.2
+  - torch>=2.0.0
+constraints:
+  max_runtime_seconds: 300
+  max_memory_mb: 4096
+  cpu_only: true
+  no_network_access: true
+output_format:
+  type: csv
+  columns:
+    - candidate_id
+    - rank
+    - score
+    - reasoning
+  top_k_candidates: 100
+precomputation:
+  input_formats:
+    - candidates.jsonl.gz
+    - candidates.jsonl
+  output_index: precomputed_pool.npz
+  embedding_model: sentence-transformers/all-MiniLM-L6-v2
