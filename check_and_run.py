@@ -89,7 +89,7 @@ def run_pipeline(dataset_path):
         subprocess.check_call([
             sys.executable, "rank.py",
             "--candidates", "precomputed_pool.npz",
-            "--output", "Breakout_Zone.csv"
+            "--output", "punjab.csv"
         ])
         print("\n[🎉] PIPELINE EXECUTION SUCCESSFUL!")
         print("[+] Your final submission spreadsheet 'punjab.csv' has been generated.")
