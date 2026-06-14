@@ -73,12 +73,12 @@ def load_job_description(jd_path: Optional[str] = None) -> Dict:
             "title": "Data & AI Engineer",
             "description": "Seeking experienced data scientists and AI engineers with strong ML fundamentals",
             "required_skills": [
-                "Python", "Machine Learning", "Data Analysis", "TensorFlow", "PyTorch",
-                "SQL", "Statistics", "Deep Learning", "NLP", "Computer Vision"
+                "python", "machine learning", "data analysis", "tensorflow", "pytorch",
+                "sql", "statistics", "deep learning", "nlp", "computer vision"
             ],
             "preferred_skills": [
-                "Kubernetes", "Docker", "AWS", "GCP", "Azure",
-                "Git", "CI/CD", "Agile", "Communication", "Leadership"
+                "kubernetes", "docker", "aws", "gcp", "azure",
+                "git", "ci/cd", "agile", "communication", "leadership"
             ],
             "years_experience_required": 3
         }
